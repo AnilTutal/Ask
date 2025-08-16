@@ -1,0 +1,100 @@
+.main_div, .main_div1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+
+.main_div1::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url('../image/b.jpg'); 
+  background-size: cover;
+  background-position: center;
+  opacity: 0.4;
+  z-index: -1;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+.a {
+    padding: 20px;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+    width: 20vw;
+}
+
+.a:hover {
+    background-color: rgb(70, 70, 237);
+}
+
+.ima_div {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+.yazi {
+    display: flex;
+    padding: 5px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(223, 18, 7);
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);  
+}
+
+.yazi2 {
+    display: flex;
+    padding: 5px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.2); 
+}
+
+/* Mobile & tablet uyumluluk */
+@media (max-width: 768px) {
+    .a {
+        width: 60vw !important;
+        height: 8vh !important;
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    .yazi2 {
+        font-size: 24px;
+    }
+
+    .yazi {
+        font-size: 18px;
+    }
+
+    .gif {
+        width: 80vw !important;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
